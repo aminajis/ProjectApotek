@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 260px;
+    background: white;
+    border-right: 1px solid #e2e8f0;
+    padding: 30px 20px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.sidebar-brand {
+    margin-bottom: 40px;
+}
+
+.brand-text {
+    display: block;
+    color: #1e293b; 
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.brand-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #64748b;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #f1f5f9;
+}
+
+.nav-item.active {
+    background-color: #f1f5f9;
+    color: #2B5B7C;
+    font-weight: 600;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 260px; 
+    min-height: 100vh;
+}
+
+.top-bar {
+    background: white;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.search-bar {
+    width: 350px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background: #2B5B7C;
+    border-radius: 50%;
+}
+
+.content-wrapper {
+    padding: 40px;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h2 { font-size: 24px; font-weight: 700; }
+.subtitle { color: #64748b; font-size: 14px; margin-top: 5px; }
+
+.btn-add {
+    background: #2B5B7C;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.stats-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.stat-card label {
+    font-size: 10px;
+    color: #94a3b8;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stat-card strong { font-size: 18px; }
+.stat-card small { font-weight: 400; color: #94a3b8; font-size: 12px; }
+
+/* --- TABLE --- */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.table-filter {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex; gap: 10px;
+}
+
+.btn-filter {
+    padding: 8px 16px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-filter.active { background: #f1f5f9; font-weight: 600; }
+
+table { width: 100%; border-collapse: collapse; }
+th { background: #f8fafc; padding: 15px 20px; text-align: left; font-size: 11px; color: #64748b; text-transform: uppercase; }
+td { padding: 15px 20px; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
+
+.tag { background: #f1f5f9; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+.tag.paten { background: #e0f2fe; color: #0369a1; }
+
+.text-muted { color: #94a3b8; }
+.text-red { color: #be123c; }
+.text-blue { color: #0369a1; }
+
+.bottom-promo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.promo-box {
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.white-box {
+    background: white;
+    border: 1px solid #e2e8f0;
+}
+
+.blue-box {
+    background: #2B5B7C;
+    color: white;
+}
+
+.promo-box h3 { margin-bottom: 12px; font-size: 18px; }
+.promo-box p { font-size: 13px; line-height: 1.6; margin-bottom: 20px; opacity: 0.9; }
+
+.btn-dark {
+    background: #1e293b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.link-white {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
