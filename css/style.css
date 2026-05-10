@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #2B5B7C;
+    --primary-dark: #1e445e;
+    --secondary: #1e293b; 
+    --accent: #3b82f6;
+    --bg-main: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --danger: #ef4444;
+    --success: #22c55e;
+    --border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.top-header {
+    background: white;
+    height: 70px;
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.search-box {
+    background: #f1f5f9;
+    padding: 8px 16px;
+    border-radius: 10px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.875rem;
+    width: 100%;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-left: 1px solid var(--border);
+    padding-left: 20px;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    background: var(--secondary);
+    border-radius: 50%;
+}
+
+nav.sidebar {
+    width: 280px;
+    background: var(--secondary);
+    color: white;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.brand-area {
+    margin-bottom: 2.5rem;
+}
+
+.brand-area h2 { font-size: 1.25rem; font-weight: 700; color: white; }
+.brand-area p { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; }
+
+.dashboard-layout {
+    display: flex;
+}
+
+main.content {
+    flex: 1;
+    margin-left: 280px; 
+    padding: 2.5rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-outline {
+    background: #f1f5f9;
+    color: var(--text-muted);
+}
